@@ -1,0 +1,36 @@
+{
+  "name": "oblachko-shop",
+  "version": "1.0.0",
+  "description": "My app",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "start": "turbo start",
+    "typecheck": "turbo typecheck",
+    "bump:ui": "pnpm dlx shadcn@latest add --all --overwrite -c packages/design-system",
+    "db:migrate": "cd packages/database && npx prisma format && npx prisma generate && npx prisma db push",
+    "db:studio": "cd packages/database && npx prisma studio",
+    "lint": "turbo lint",
+    "format": "turbo format"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.10.0",
+    "comander": "0.0.1-security",
+    "pg": "^8.13.3"
+  },
+  "devDependencies": {
+    "@turbo/gen": "^2.4.2",
+    "@types/node": "^22.13.4",
+    "eslint": "^9.20.0",
+    "prettier": "^3.5.1",
+    "tsup": "^8.3.6",
+    "turbo": "^2.4.2",
+    "typescript": "^5.7.3"
+  },
+  "engines": {
+    "node": ">=20.11.0"
+  },
+  "packageManager": "pnpm@10.1.0"
+}

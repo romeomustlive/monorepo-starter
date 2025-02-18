@@ -1,0 +1,20 @@
+{
+  "name": "@repo/database",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/ts-config": "workspace:*",
+    "eslint": "^9.20.0",
+    "prisma": "^6.4.0",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@prisma/client": "6.4.0"
+  }
+}
