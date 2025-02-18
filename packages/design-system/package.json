@@ -2,9 +2,11 @@
   "name": "@repo/design-system",
   "private": true,
   "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "clean": "git clean -xdf .cache .turbo dist node_modules",
-    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false",
+    "lint": "eslint ."
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
